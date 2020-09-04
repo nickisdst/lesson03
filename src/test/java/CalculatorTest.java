@@ -39,9 +39,8 @@ public class CalculatorTest {
     public void divideTest() {
         int random1 = (int) (Math.random() * 100000);
         int random2 = (int) (Math.random() * 100000);
-        double delta = 0.000001 ;
         Assert.assertEquals(random1 + " / " + random2 + " = " + (random1 / random2),
-                random1 / random2, calculator.division(random1, random2), delta);
+                (double) random1 / random2, calculator.division(random1, random2), 0.000001);
     }
 
 
